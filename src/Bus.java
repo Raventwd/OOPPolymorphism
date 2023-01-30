@@ -1,5 +1,26 @@
 public class Bus extends Transport {
-    public Bus(String brand, String model, String color, int maxSpeed, int year, String country, int engineVolume) {
-        super(brand, model, year, country, color, maxSpeed, engineVolume);
+    sitCapacity sitCapacity;
+    public Bus(String brand, String model, String color, int maxSpeed, int year, String country, int engineVolume, String carType) {
+        super(brand, model, year, country, color, maxSpeed, engineVolume, carType);
+    }
+
+    enum sitCapacity{
+        особомалая,
+        малая,
+        средняя,
+        большая,
+        особобольшая
+    }
+
+    public Bus.sitCapacity getSitCapacity() {
+        return sitCapacity;
+    }
+
+    public void setSitCapacity(Bus.sitCapacity sitCapacity) {
+        this.sitCapacity = sitCapacity;
+    }
+
+    public void printType() {
+        System.out.println(carType);
     }
 }

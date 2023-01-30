@@ -6,9 +6,11 @@ public abstract class Transport {
     private String color;
     private int maxSpeed;
 
+    public String carType;
+
     private int engineVolume;
 
-    public Transport(String brand, String model, int year, String country, String color, int maxSpeed, int engineVolume) {
+    public Transport(String brand, String model, int year, String country, String color, int maxSpeed, int engineVolume, String carType) {
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -16,6 +18,7 @@ public abstract class Transport {
         this.color = (color != null && color.isEmpty() != true && color.isBlank() != true) ? color : "white";
         this.maxSpeed = (maxSpeed >= 0) ? maxSpeed : 100;
         this.engineVolume = engineVolume;
+        this.carType = carType;
     }
 
     public String getBrand() {
@@ -66,4 +69,7 @@ public abstract class Transport {
                 ", maxSpeed=" + maxSpeed +
                 '}' + ", engineVolume" + engineVolume;
     }
+
+    public abstract void printType();
+
 }

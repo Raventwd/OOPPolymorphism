@@ -3,8 +3,8 @@ public class Car extends Transport {
     private int seatsNumber;
 
 
-    public Car(String brand, String model, String gear, int seatsNumber, int year, String country, String color, int maxSpeed, int engineVolume) {
-        super(brand, model, year, country, color, maxSpeed, engineVolume);
+    public Car(String brand, String model, String gear, int seatsNumber, int year, String country, String color, int maxSpeed, int engineVolume, String carType) {
+        super(brand, model, year, country, color, maxSpeed, engineVolume, carType);
     }
 
     public String getGear() {
@@ -19,4 +19,9 @@ public class Car extends Transport {
     public String toString() {
         return super.toString() + gear + seatsNumber;
     }
+
+    public void printType() {
+        System.out.println(carType);
+    }
+
 }
