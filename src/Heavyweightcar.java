@@ -1,6 +1,6 @@
 public class Heavyweightcar extends Transport {
 
-    allowedWeight allowedWeight;
+    private allowedWeight allowedWeight;
 
     public Heavyweightcar(String brand, String model, String color, int maxSpeed, int year, String country, int engineVolume, String carType) {
         super(brand, model, year, country, color, maxSpeed, engineVolume, carType);

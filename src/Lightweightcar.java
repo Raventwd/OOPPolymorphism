@@ -1,5 +1,5 @@
 public class Lightweightcar extends Transport {
-    bodyType bodyType;
+    private bodyType bodyType;
     public Lightweightcar(String brand, String model, String color, int maxSpeed, int year, String country, int engineVolume, String carType) {
         super(brand, model, year, country, color, maxSpeed, engineVolume, carType);
     }
