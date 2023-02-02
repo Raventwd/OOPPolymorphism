@@ -72,4 +72,13 @@ public abstract class Transport {
 
     public abstract void printType();
 
+    public void carCheck() throws Exception {
+        if(carType == "Lightweightcar" || carType == "Heavyweightcar"){
+            System.out.println("Можно пройти диагностику");
+        }
+        if(carType == "Bus"){
+            throw new Exception("TransportTypeException");
+        }
+    }
+
 }

@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Bus bus1 = new Bus("brand1", "model1", "White", 130, 2000, "Japan", 2, "Bus");
         Bus bus2 = new Bus("brand2", "model2", "White", 160, 2005, "Usa", 2, "Bus");
         Bus bus3 = new Bus("brand3", "model3", "White", 170, 2008, "Australia", 2, "Bus");
@@ -28,6 +28,8 @@ public class Main {
         System.out.println(hatchback3);
         System.out.println(hatchback4);
         car1.printType();
+        car1.carCheck();
+        bus1.carCheck();
     }
 
     public interface competitive {

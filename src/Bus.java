@@ -5,11 +5,11 @@ public class Bus extends Transport {
     }
 
     enum sitCapacity{
-        особомалая,
-        малая,
-        средняя,
-        большая,
-        особобольшая
+        small,
+        little,
+        average,
+        big,
+        large
     }
 
     public Bus.sitCapacity getSitCapacity() {

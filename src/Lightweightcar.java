@@ -5,15 +5,13 @@ public class Lightweightcar extends Transport {
     }
 
     enum bodyType {
-        Седан,
-        Хетчбэк,
-        Купе,
-        Универсал,
-        Внедорожник,
-        Кроссовер,
-        Пикап,
-        Фургон,
-        Минивэн
+        sedan,
+        hatchback,
+        coupe,
+        wagon,
+        offroad,
+        crossover,
+        minivan
     }
 
     public String toString() {
