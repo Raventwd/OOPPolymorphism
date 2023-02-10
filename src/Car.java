@@ -3,8 +3,8 @@ public class Car extends Transport {
     private int seatsNumber;
 
 
-    public Car(String brand, String model, String gear, int seatsNumber, int year, String country, String color, int maxSpeed, int engineVolume, String carType, Mechanic mechanic) {
-        super(brand, model, year, country, color, maxSpeed, engineVolume, carType, mechanic);
+    public Car(String brand, String model, String gear, int seatsNumber, int year, String country, String color, int maxSpeed, int engineVolume, String carType) {
+        super(brand, model, year, country, color, maxSpeed, engineVolume, carType);
     }
 
     public String getGear() {

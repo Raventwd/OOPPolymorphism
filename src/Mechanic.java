@@ -19,6 +19,7 @@ public class Mechanic {
         return nameSurname;
     }
 
+
     public void maintenance() {
         System.out.println("Техобслуживание");
     }

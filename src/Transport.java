@@ -12,9 +12,10 @@ public abstract class Transport {
 
     private int engineVolume;
 
-    private Mechanic mechanic;
 
-    public Transport(String brand, String model, int year, String country, String color, int maxSpeed, int engineVolume, String carType, Mechanic mechanic) {
+
+
+    public Transport(String brand, String model, int year, String country, String color, int maxSpeed, int engineVolume, String carType) {
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -23,7 +24,13 @@ public abstract class Transport {
         this.maxSpeed = (maxSpeed >= 0) ? maxSpeed : 100;
         this.engineVolume = engineVolume;
         this.carType = carType;
-        this.mechanic=mechanic;
+    }
+    public static void main(String[] args) {
+        ArrayList mechanicList = new ArrayList<>();
+        Mechanic mechanic1 = new Mechanic("Anton Antonov", "company1");
+        Mechanic mechanic2 = new Mechanic("Anton Ivanov", "company2");
+        mechanicList.add(mechanic1);
+        mechanicList.add(mechanic2);
     }
 
     public String getBrand() {
@@ -63,6 +70,8 @@ public abstract class Transport {
         return engineVolume;
     }
 
+
+
     @Override
     public String toString() {
         return "Transport{" +
@@ -78,16 +87,11 @@ public abstract class Transport {
     public abstract void printType();
 
 
-
-    ArrayList <String> mechanicList = new ArrayList<>();
-
-
-
     public void carCheck() throws Exception {
-        if(carType == "Lightweightcar" || carType == "Heavyweightcar"){
+        if (carType == "Lightweightcar" || carType == "Heavyweightcar") {
             System.out.println("Можно пройти диагностику");
         }
-        if(carType == "Bus"){
+        if (carType == "Bus") {
             throw new Exception("TransportTypeException");
         }
     }
