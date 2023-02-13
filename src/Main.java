@@ -12,8 +12,8 @@ public class Main {
         racerList.add(bus1);
         racerList.add(hatchback1);
         MaintenanceStation station1 = new MaintenanceStation();
-        station1.queueCarAdd();
-        System.out.println(station1.getCarsQueue());
+        station1.queueCarAdd(hatchback1);
+        station1.getCarsQueue();
     }
 
     public interface competitive {
