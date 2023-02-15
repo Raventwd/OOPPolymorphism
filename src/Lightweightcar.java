@@ -1,7 +1,9 @@
+import java.util.List;
+
 public class Lightweightcar extends Transport {
     private bodyType bodyType;
-    public Lightweightcar(String brand, String model, String color, int maxSpeed, int year, String country, int engineVolume, String carType) {
-        super(brand, model, year, country, color, maxSpeed, engineVolume, carType);
+    public Lightweightcar(String brand, String model, String color, int maxSpeed, int year, String country, int engineVolume, String carType, Mechanic mechanic) {
+        super(brand, model, year, country, color, maxSpeed, engineVolume, carType, (List<Mechanic>) mechanic);
     }
 
     enum bodyType {

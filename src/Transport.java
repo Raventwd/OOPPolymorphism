@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.ArrayList;
 
 public abstract class Transport {
@@ -12,10 +13,19 @@ public abstract class Transport {
 
     private int engineVolume;
 
+    public List<Mechanic> mechanics = new ArrayList<Mechanic>();
+    {
+        Mechanic mechanic1 = new Mechanic("Anton Antonov", "company1");
+        Mechanic mechanic2 = new Mechanic("Anton Ivanov", "company2");
+        mechanics.add(mechanic1);
+        mechanics.add(mechanic2);
+    }
 
 
 
-    public Transport(String brand, String model, int year, String country, String color, int maxSpeed, int engineVolume, String carType) {
+
+
+    public Transport(String brand, String model, int year, String country, String color, int maxSpeed, int engineVolume, String carType, List<Mechanic>mechanics) {
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -24,14 +34,11 @@ public abstract class Transport {
         this.maxSpeed = (maxSpeed >= 0) ? maxSpeed : 100;
         this.engineVolume = engineVolume;
         this.carType = carType;
+        this.mechanics=getMechanics();
     }
-    public static void main(String[] args) {
-        ArrayList mechanicList = new ArrayList<>();
-        Mechanic mechanic1 = new Mechanic("Anton Antonov", "company1");
-        Mechanic mechanic2 = new Mechanic("Anton Ivanov", "company2");
-        mechanicList.add(mechanic1);
-        mechanicList.add(mechanic2);
-    }
+
+
+
 
     public String getBrand() {
         return brand;
@@ -96,4 +103,11 @@ public abstract class Transport {
         }
     }
 
+    public List<Mechanic> getMechanics() {
+        return mechanics;
+    }
+
+    public void setMechanics(List<Mechanic> mechanics) {
+        this.mechanics = mechanics;
+    }
 }
