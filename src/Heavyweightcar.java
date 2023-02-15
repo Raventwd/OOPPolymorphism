@@ -4,8 +4,8 @@ public class Heavyweightcar extends Transport {
     private allowedWeight allowedWeight;
 
 
-    public Heavyweightcar(String brand, String model, String color, int maxSpeed, int year, String country, int engineVolume, String carType, Mechanic mechanic) {
-        super(brand, model, year, country, color, maxSpeed, engineVolume, carType,(List<Mechanic>) mechanic );
+    public Heavyweightcar(String brand, String model, String color, int maxSpeed, int year, String country, int engineVolume, String carType, List<Mechanic>mechanics) {
+        super(brand, model, year, country, color, maxSpeed, engineVolume, carType, mechanics );
     }
 
     enum allowedWeight {

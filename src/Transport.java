@@ -13,13 +13,8 @@ public abstract class Transport {
 
     private int engineVolume;
 
-    public List<Mechanic> mechanics = new ArrayList<Mechanic>();
-    {
-        Mechanic mechanic1 = new Mechanic("Anton Antonov", "company1");
-        Mechanic mechanic2 = new Mechanic("Anton Ivanov", "company2");
-        mechanics.add(mechanic1);
-        mechanics.add(mechanic2);
-    }
+    private List<Mechanic> mechanics = new ArrayList<>();
+
 
 
 
@@ -34,7 +29,7 @@ public abstract class Transport {
         this.maxSpeed = (maxSpeed >= 0) ? maxSpeed : 100;
         this.engineVolume = engineVolume;
         this.carType = carType;
-        this.mechanics=getMechanics();
+        this.mechanics=mechanics;
     }
 
 
