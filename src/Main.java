@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class Main {
@@ -19,7 +21,15 @@ public class Main {
 
         MaintenanceStation station1 = new MaintenanceStation();
         station1.queueCarAdd(hatchback1);
-        station1.getCarsQueue();
+
+
+        Map<Transport, List<Mechanic>> transportListMap = new HashMap<>();
+        transportListMap.put(bus1, mechanics);
+        transportListMap.put(hatchback1, mechanics);
+        for (Map.Entry<Transport, List<Mechanic>> car: transportListMap.entrySet()) {
+            System.out.println("Машина " + car.getKey() + " Механики " + car.getValue());
+        }
+
 
 
 
