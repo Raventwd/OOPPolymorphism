@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class Main {
@@ -28,6 +25,16 @@ public class Main {
         transportListMap.put(hatchback1, mechanics);
         for (Map.Entry<Transport, List<Mechanic>> car: transportListMap.entrySet()) {
             System.out.println("Машина " + car.getKey() + " Механики " + car.getValue());
+            Set<String> drivers = new HashSet<>();
+
+            drivers.add("driver1");
+            drivers.add("driver2");
+            drivers.add("driver3");
+
+            Iterator<String> driverName = drivers.iterator();
+           while(driverName.hasNext()){
+               System.out.println(driverName.next());
+           }
         }
 
 
